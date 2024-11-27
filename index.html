@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LINKIN PARK COMMUNITY</title>
+    <style>
+        /* Основные стили */
+        body {
+            font-family: 'Arial', sans-serif;
+            background: #1a1a1a;
+            color: white;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            text-align: center;
+            background-image: url('https://www.example.com/your-background-image.jpg');
+            background-size: cover;
+            background-position: center;
+        }
+
+        h1 {
+            font-size: 3em;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+        }
+
+        .player-container {
+            background: rgba(0, 0, 0, 0.5); /* Полупрозрачный фон */
+            border-radius: 10px;
+            padding: 30px;
+            width: 80%;
+            max-width: 500px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.6);
+        }
+
+        /* Стили для аудиоплеера */
+        audio {
+            width: 100%;
+            margin-top: 20px;
+            border-radius: 5px;
+            background-color: #333;
+            border: none;
+            outline: none;
+        }
+
+        /* Кнопка play с красивыми эффектами */
+        .play-button {
+            background-color: #ff6600;
+            color: white;
+            padding: 15px 30px;
+            font-size: 1.2em;
+            border-radius: 30px;
+            border: none;
+            cursor: pointer;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+            transition: background-color 0.3s, transform 0.3s;
+        }
+
+        .play-button:hover {
+            background-color: #ff5500;
+            transform: scale(1.1);
+        }
+
+        .play-button:active {
+            background-color: #cc4400;
+            transform: scale(1);
+        }
+
+        /* Мобильная адаптация */
+        @media (max-width: 600px) {
+            h1 {
+                font-size: 2em;
+            }
+
+            .player-container {
+                width: 90%;
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="player-container">
+        <h1>Добро пожаловать на LINKIN PARK COMMUNITY STATION!</h1>
+        <p>Нажмите кнопку, чтобы начать слушать.</p>
+        <audio controls>
+            <source src="http://yourserver.com:8000/stream" type="audio/mp3">
+            Ваш браузер не поддерживает элемент audio.
+        </audio>
+        <br>
+        <button class="play-button" onclick="document.querySelector('audio').play()">Play</button>
+    </div>
+
+</body>
+</html>
